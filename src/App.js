@@ -1,7 +1,7 @@
 /* eslint-disable array-callback-return */
 import axios from 'axios';
 import { useEffect, useState } from 'react';
-import ProductSimple from './components/Card';
+import SocialProfileSimple from './components/Card';
 
 export default function App() {
     const [users, setUsers] = useState([]);
@@ -26,7 +26,8 @@ export default function App() {
     return (
         <>
             {users.map((user) => {
-                return <ProductSimple key={user.id} user={user} />;
+                console.log(user);
+                return <SocialProfileSimple key={user.id} user={user} />;
             })}
         </>
     );

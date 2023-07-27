@@ -57,6 +57,9 @@ https://codesandbox.io/s/template-aula-design-systems-chakra-mpcifz
         );
         ```
 
+    -   Onde a importação do `Provider` foi feita, faça també, a importação do `theme` e passe-o como parâmetro para o componente `ChakraBaseProvider`:
+        ![Alt text](image.png)
+
 ## Prática 1
 
 ### Enunciado
@@ -110,6 +113,12 @@ https://codesandbox.io/s/template-aula-design-systems-chakra-mpcifz
     (...)
     ```
 -   No componente `Card.js` faço as trocas desejadas:
+    -   **Importante:** Não esquecer de receber por propsa as informações dentro do componente para poder referencia-la quando necessário:
+        ```
+        (...)
+        export default function ProductSimple({ user }) {
+        (...)
+        ```
     -   Para imagem aleatória usei esse site: [picsum](https://picsum.photos/)
     -   E para criar uma imagem aleatória modifiquei a url de uma das imagens da seguinte forma:
         -   antes:
@@ -120,9 +129,33 @@ https://codesandbox.io/s/template-aula-design-systems-chakra-mpcifz
             ```
             `https://picsum.photos/seed/${user.id}/200/200`
             ```
+    -   Chamei as informações que eu quis da seguinte forma:
+        ```
+        (...)
+        <Text fontWeight={800} fontSize={'xl'}>
+            {user.email}
+        </Text>
+        (...)
+        ```
 
 ## Fixação
 
 ### Enunciado
 
+-   Fazer a mesma coisa com o segundo card desse [link](https://chakra-templates.dev/components/cards)
+
 ### Resolução
+
+1. Fui até o link do `chakra` copiei o código
+2. Colei o código inteiro dentro de `Card.js`
+3. Importei o novo componente corretamente no `App.js`:
+    ```
+        return (
+        <>
+            {users.map((user) => {
+                return <SocialProfileSimple key={user.id} user={user} />;
+            })}
+        </>
+    );
+    ```
+4. Recebi por props as informações no `Card.js` e fui fazendo as alterações desejadas como nas práticas guiadas anteriores

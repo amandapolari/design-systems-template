@@ -1,88 +1,128 @@
 'use client';
 
 import {
+    Heading,
+    Avatar,
     Box,
     Center,
-    useColorModeValue,
-    Heading,
     Text,
     Stack,
-    Image,
+    Button,
+    Link,
+    Badge,
+    useColorModeValue,
 } from '@chakra-ui/react';
 
-export default function ProductSimple({ user }) {
-    const IMAGE = `https://picsum.photos/seed/${user.id}/200/200`;
+export default function SocialProfileSimple({ user }) {
     return (
-        <Center py={12}>
+        <Center py={6}>
             <Box
-                role={'group'}
-                p={6}
-                maxW={'330px'}
+                maxW={'320px'}
                 w={'full'}
-                bg={useColorModeValue('white', 'gray.800')}
+                bg={useColorModeValue('white', 'gray.900')}
                 boxShadow={'2xl'}
                 rounded={'lg'}
-                pos={'relative'}
-                zIndex={1}
+                p={6}
+                textAlign={'center'}
             >
-                <Box
-                    rounded={'lg'}
-                    mt={-12}
+                <Avatar
+                    size={'xl'}
+                    src={`https://picsum.photos/seed/${user.id}/200/200`}
+                    mb={4}
                     pos={'relative'}
-                    height={'230px'}
                     _after={{
-                        transition: 'all .3s ease',
                         content: '""',
-                        w: 'full',
-                        h: 'full',
+                        w: 4,
+                        h: 4,
+                        bg: 'green.300',
+                        border: '2px solid white',
+                        rounded: 'full',
                         pos: 'absolute',
-                        top: 5,
-                        left: 0,
-                        backgroundImage: `url(${IMAGE})`,
-                        filter: 'blur(15px)',
-                        zIndex: -1,
+                        bottom: 0,
+                        right: 3,
                     }}
-                    _groupHover={{
-                        _after: {
-                            filter: 'blur(20px)',
-                        },
-                    }}
+                />
+                <Heading fontSize={'2xl'} fontFamily={'body'}>
+                    {user.name}
+                </Heading>
+                <Text fontWeight={600} color={'gray.500'} mb={4}>
+                    {user.email}
+                </Text>
+                <Text fontWeight={600} color={'gray.500'} mb={4}>
+                    {`@${user.username}`}
+                </Text>
+                <Text
+                    textAlign={'center'}
+                    color={useColorModeValue('gray.700', 'gray.400')}
+                    px={3}
                 >
-                    <Image
-                        rounded={'lg'}
-                        height={230}
-                        width={282}
-                        objectFit={'cover'}
-                        src={IMAGE}
-                        alt="#"
-                    />
-                </Box>
-                <Stack pt={10} align={'center'}>
-                    <Text
-                        color={'gray.500'}
+                    Actress, musician, songwriter and artist. PM for work
+                    inquires or <Text color={'blue.400'}>#tag</Text> me in your
+                    posts
+                </Text>
+
+                <Stack
+                    align={'center'}
+                    justify={'center'}
+                    direction={'row'}
+                    mt={6}
+                >
+                    <Badge
+                        px={2}
+                        py={1}
+                        bg={useColorModeValue('gray.50', 'gray.800')}
+                        fontWeight={'400'}
+                    >
+                        #art
+                    </Badge>
+                    <Badge
+                        px={2}
+                        py={1}
+                        bg={useColorModeValue('gray.50', 'gray.800')}
+                        fontWeight={'400'}
+                    >
+                        #photography
+                    </Badge>
+                    <Badge
+                        px={2}
+                        py={1}
+                        bg={useColorModeValue('gray.50', 'gray.800')}
+                        fontWeight={'400'}
+                    >
+                        #music
+                    </Badge>
+                </Stack>
+
+                <Stack mt={8} direction={'row'} spacing={4}>
+                    <Button
+                        flex={1}
                         fontSize={'sm'}
-                        textTransform={'uppercase'}
+                        rounded={'full'}
+                        _focus={{
+                            bg: 'gray.200',
+                        }}
                     >
-                        Brand
-                    </Text>
-                    <Heading
-                        fontSize={'2xl'}
-                        fontFamily={'body'}
-                        fontWeight={500}
+                        Message
+                    </Button>
+                    <Button
+                        // h={'35px'}
+                        flex={1}
+                        fontSize={'sm'}
+                        rounded={'full'}
+                        bg={'#bd6b73'}
+                        color={'white'}
+                        boxShadow={
+                            '0px 1px 25px -5px rgb(66 153 225 / 48%), 0 10px 10px -5px rgb(66 153 225 / 43%)'
+                        }
+                        _hover={{
+                            bg: 'blue.500',
+                        }}
+                        _focus={{
+                            bg: 'blue.500',
+                        }}
                     >
-                        {user.name}
-                    </Heading>
-                    <Stack direction={'row'} align={'center'}>
-                        <Text fontWeight={800} fontSize={'xl'}>
-                            {user.email}
-                        </Text>
-                        <Text
-                            textDecoration={'line-through'}
-                            color={'gray.600'}
-                        >
-                            $199
-                        </Text>
-                    </Stack>
+                        Follow
+                    </Button>
                 </Stack>
             </Box>
         </Center>
