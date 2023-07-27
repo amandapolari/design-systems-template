@@ -64,19 +64,16 @@ https://codesandbox.io/s/template-aula-design-systems-chakra-mpcifz
 
 ## Prática 1
 
-### Resolução
-
--   Nesse [link](https://chakra-templates.dev/components/cards) vou escolher um card, copiar o código
--   Depois, em `src` criar uma pasta chamada `components` e dentro dela um arquivo chamado `Card.js`, em seguida colo o código dentro desse arquivo
--   Pego o nome do componente e chamo no `App.js`
+- As práticas 1 e 2 foram resolvidas juntas.
 
 ## Prática 2
 
 ### Resolução
+-   Nesse [link](https://chakra-templates.dev/components/cards) vou escolher um card, copiar o código
+-   Depois, em `src` criar uma pasta chamada `components` e dentro dela um arquivo chamado `Card.js`, em seguida colo o código dentro desse arquivo
+-   Pego o nome do componente e chamo no `App.js`
 
 ## Prática 3
-
-### Enunciado
 
 ### Resolução
 
