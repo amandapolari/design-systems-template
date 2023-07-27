@@ -59,7 +59,7 @@ https://codesandbox.io/s/template-aula-design-systems-chakra-mpcifz
         );
         ```
 
-    -   Onde a importação do `Provider` foi feita, faça també, a importação do `theme` e passe-o como parâmetro para o componente `ChakraBaseProvider`:
+    -   Onde a importação do `Provider` foi feita, faça também, a importação do `theme` e passe-o como parâmetro para o componente `ChakraBaseProvider`:
         ![Alt text](image.png)
 
 ## Prática 1
