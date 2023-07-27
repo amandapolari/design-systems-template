@@ -21,7 +21,7 @@ https://codesandbox.io/s/template-aula-design-systems-chakra-mpcifz
     npm i @chakra-ui/react @emotion/react @emotion/styled framer-motion
     ```
 
--   Após a instalação da Lib, precisamos **chamar** o `provider`:
+-   Após a instalação da Lib, precisamos **chamar** o `provider`, isso pode ser feito no `App.js` ou no `index.js`:
 
     -   Dentro do `App.js`:
         -   importar:
@@ -41,7 +41,7 @@ https://codesandbox.io/s/template-aula-design-systems-chakra-mpcifz
             );
             (...)
             ```
-    -   Dentro do `index.js` **que chama** o `App.js`:
+    -   Dentro do `index.js`:
 
         ```
         import React from 'react';
