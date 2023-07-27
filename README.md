@@ -11,6 +11,8 @@ https://codesandbox.io/s/template-aula-design-systems-chakra-mpcifz
 -   [4. Prática 3](#prática-3)
 -   [5. Fixação](#fixação)
 
+[link com enunciados](https://docs.google.com/presentation/d/e/2PACX-1vT1cZRej-3FlH63D3r77leM8Obeozt0dNVRgMXv9OQHdRMu-QqAPvrXhiW-LwY1OTiTUX24PLwJab3h/pub?start=false&loop=false&delayms=3000&slide=id.g164569922a2_1_7)
+
 ## Instalações
 
 -   Para fazer a instalação do Chakra UI basta rodar o seguinte comando:
@@ -62,10 +64,6 @@ https://codesandbox.io/s/template-aula-design-systems-chakra-mpcifz
 
 ## Prática 1
 
-### Enunciado
-
--Criando e Mostrando
-
 ### Resolução
 
 -   Nesse [link](https://chakra-templates.dev/components/cards) vou escolher um card, copiar o código
@@ -74,13 +72,9 @@ https://codesandbox.io/s/template-aula-design-systems-chakra-mpcifz
 
 ## Prática 2
 
-### Enunciado
-
 ### Resolução
 
 ## Prática 3
-
--   Mapeando
 
 ### Enunciado
 
